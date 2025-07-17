@@ -5,6 +5,9 @@
 
     if(this.getProperty("keyed_name") == null)
         return innovator.newError("Error : Document Name Is Mandatory Information, Please enter the document name.");
+    
+    else if(this.getProperty("name") == null)
+        return innovator.newError("Error : Document name is mandatory");
 
   return this;]]></method_code>
   <method_type>C#</method_type>
