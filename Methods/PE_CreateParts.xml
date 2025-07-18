@@ -17,10 +17,6 @@
   Innovator item = innovator.newItem("Part',"get");
   Item resultItem = item.apply();
 
-
-  if(resultItem.isError())
-    reutrn resultItem;
-
   return this;]]></method_code>
   <method_type>C#</method_type>
   <name>PE_CreateParts</name>
