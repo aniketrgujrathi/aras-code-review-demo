@@ -13,6 +13,12 @@
   Innovator documentItem = innovator.newItem("Document","get");
   Item documentResultItems = documentItem.apply();
 
+  for(int index = 0 ; index < documentResultItem.getItemCount() ; index++)
+  {
+    Item documentItem = documentResultItems.getItemByIndex(index);
+    if(documentItem.getProperty("name") == null)
+      return documentItem;
+  }
 
   Innovator item = innovator.newItem("Part',"get");
   Item resultItem = item.apply();
