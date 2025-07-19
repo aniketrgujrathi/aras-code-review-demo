@@ -8,6 +8,8 @@
     
     else if(this.getProperty("name") == null)
         return innovator.newError("Error : Document name is mandatory");
+        
+    Console.WriteLine("Method End");
 
   return this;]]></method_code>
   <method_type>C#</method_type>

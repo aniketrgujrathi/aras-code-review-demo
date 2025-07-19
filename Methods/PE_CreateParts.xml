@@ -10,8 +10,21 @@
     Item resultItem = innovator.applyAML(aml);
   }
 
+  Innovator documentItem = innovator.newItem("Document","get");
+  Item documentResultItems = documentItem.apply();
+
+  for(int index = 0 ; index < documentResultItem.getItemCount() ; index++)
+  {
+    Item documentItem = documentResultItems.getItemByIndex(index);
+    if(documentItem.getProperty("name") == null)
+      return documentItem;
+  }
+
   Innovator item = innovator.newItem("Part',"get");
   Item resultItem = item.apply();
+
+  if(resultItem.isError())
+    return innovator.newError("Error : Occured While Featching Part Information");
 
   return this;]]></method_code>
   <method_type>C#</method_type>
